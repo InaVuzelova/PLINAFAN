@@ -1,0 +1,202 @@
+/* Body styles */
+.sign-up-link {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+body.custom-body {
+  font-family: Arial, sans-serif;
+  background-color: #d2b48c;
+  background-image: url("loginPageBackground.png");
+  background-size: cover;
+  margin: 10px;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d2b48c;
+  background-image: url("loginPageBackground.png");
+  margin: 10px;
+  padding: 0;
+}
+
+form.custom {
+  width: 30%;
+  background-color: #f0e0bf;   
+  padding: 20px;
+  border-radius: 5px;
+}
+
+form {
+  width: 30%;
+  background-color: #ffb3b0;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Header styles */
+h2 {
+  color: #ffffff;
+  text-align: left;
+  padding: 10px;
+/*  border-bottom: 2px solid #333; */
+  margin: 0;
+}
+
+/* Navigation styles */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #7d66a0;
+  text-align: center;
+}
+
+ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* Styles for the ordered list */
+ol {
+  list-style-type: decimal; /* Use decimal numbers for the list items */
+  margin: 0;
+  padding: 10;
+  text-align: left;
+  padding: 20px; /* Add padding for spacing */
+}
+
+
+/* Image styles */
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Links styles */
+a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #D9B3E8;
+}
+
+table {
+  width: 60%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Table header styles */
+table-header {
+  background-color: #333;
+  color: #fff;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+/* Table row styles */
+table-row {
+  background-color: #f2f2f2;
+}
+
+input, 
+textarea, 
+select {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #555;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  border-color: #555;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.arrow-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #f1f1f1;
+      border: none;
+      color: #000;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+.arrow-button::after {
+      content: "\2190"; /* Unicode for left arrow */
+      margin-left: 10px;
+    }
