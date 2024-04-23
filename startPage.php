@@ -38,7 +38,7 @@ session_start();
   display: flex;
   font-family: 'Monserrat';
   font-size: 20px;
-  background: linear-gradient(to right, #97f0e2, #03a9f4);
+  background: linear-gradient(to right, #0e59ed, #97f0e2);
   padding: 10px;
   color: #fff;
   height: 30px;
@@ -82,10 +82,10 @@ session_start();
 
 .logo {
   position:relative;
-  top: 10px;
+  top: 40px;
   right: 20px;
-  width: 400px;
-  height: 300px;
+  width: 600px;
+  height: 400px;
 }
 
 .image {
@@ -103,7 +103,7 @@ session_start();
 body {
   font-family: Arial, sans-serif;
   background-color: lavenderblush;
-  background-image: url("startPageBackground.png");
+  background-image: url("loginPageBackground2.jpg");
   margin: 10px;
   padding: 0;
 }
