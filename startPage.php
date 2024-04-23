@@ -6,12 +6,14 @@ session_start();
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="styles.css">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Home page</title>
-	<style>	 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home page</title>
+  <style>  
 .dropdown {
+  position: relative;
   display: inline-block;
+  top: -20px;
 }
 
 .dropdown-content {
@@ -39,6 +41,7 @@ session_start();
   background: linear-gradient(to right, #97f0e2, #03a9f4);
   padding: 10px;
   color: #fff;
+  height: 30px;
 }
 
 .menu .dropdown {
@@ -67,30 +70,34 @@ session_start();
   color: #f2dbaa;
 }
 
-    .container {
-      position: relative;
-      width: 100%;
-      height: 150vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-    }
+.container {
+  position: relative;
+  width: 100%;
+  height: 150vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
 
-    .logo {
-      position:relative;
-      top: 10px;
-      right: 20px;
-      width: 400px;
-      height: 300px;
-    }
+.logo {
+  position:relative;
+  top: 10px;
+  right: 20px;
+  width: 400px;
+  height: 300px;
+}
 
-    .image {
-      width: 350px;
-      height: 200px;
-      border-radius: 0px;
-      position: fixed;
-    }
+.image {
+  width: 350px;
+  height: 200px;
+  border-radius: 0px;
+  position: fixed;
+}
+
+.make-reservation {
+  margin-top: 25px; /* Adjust this value according to your needs */
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -111,53 +118,26 @@ if(isset($_SESSION['role'])) {
 </head>
 <body>
 <div class="menu">
+  <!--<div class="dropdown-container">-->
     <div class="dropdown">
-      <?php if($role=="Administrator") { ?>
-      <span>Input</span>
+      <?php if($role=="Administrator" || $role=="Client") { ?>
+      <img src="menu.png" alt="Menu" width="30" height="30"/>
       <div class="dropdown-content">
-        <a href='input_book.php'>books</a><br>
-        <a href='input_reader.php'>readers</a><br>
-        <a href='input_publisher.php'>publishers</a><br>
-        <a href='input_author.php'>authors</a><br>
-        <a href='input_genre.php'>genres</a><br>
-        <?php if($role=="Administrator") { ?>
-        <a href='input_employee.php'>employees</a><br>
-        <a href='input_position.php'>positions</a>
-        <?php } ?>
+        <a href='input_book.php'>Information</a><br>
+        <a href='input_reader.php'>Services</a><br>
+        <a href='input_publisher.php'>Entertainments</a><br>
+        <a href='input_author.php'>Offers</a><br>
       </div>
       <?php } ?>
     </div>
 
-    <div class="dropdown">
-      <span>Queries</span>
-      <div class="dropdown-content">
-        <a href='checkedOutBooksByReader.php'>Checked-out books by reader</a><br>
-        <a href='checkedOutBookOrderedByReturnDate.php'>Checked-out books, ordered by return date</a><br>
-        <a href='freeBooks.php'>Free books, ordered by number of check-outs</a><br>
-        <a href='mostCheckedOutBooks.php'>Most checked-out books</a><br>
-        <a href='top5employeesByBooks.php'>Top 5 employees by given books</a><br>
-        <a href='top5readersByBooks.php'>Top 5 readers by given books</a>
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <?php if($role=="Administrator") { ?>
-      <span>Checkout</span>
-      <div class="dropdown-content">
-        <a href='input_check-out.php'>Request a check-out</a><br>
-        <a href='input_check-out_book.php'>Book check-out</a>
-      </div>
+    <div class="dropdown make-reservation">
+      <?php if($role=="Administrator" || $role=="Client") { ?>
+      <a href='makeReservation.php'> Make Reservation </a><br>
       <?php } ?>
-    </div>
-
-    <div class="dropdown">
-      <span>Search</span>
-      <div class="dropdown-content">
-        <a href='search_forms.php'>Search books</a>
-        <a href='view_all_books.php'>View all books</a>
-      </div>
-    </div>
-  </div>
+    </div> 
+  <!--</div>-->
+</div>
 
   <img class="logo" src="logo.png">
 
