@@ -20,7 +20,7 @@ session_start();
   display: none;
   position: absolute;
   /*background-color: #97f0e2; /* dropdown fon */
-  background: linear-gradient(to bottom, #97f0e2, #03a9f4);
+  background: linear-gradient(to bottom, #0e59ed, #97f0e2);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
