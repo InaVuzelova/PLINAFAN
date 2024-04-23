@@ -80,21 +80,6 @@ session_start();
   position: fixed;
 }
 
-.logo {
-  position:relative;
-  top: 40px;
-  right: 20px;
-  width: 600px;
-  height: 400px;
-}
-
-.image {
-  width: 350px;
-  height: 200px;
-  border-radius: 0px;
-  position: fixed;
-}
-
 .make-reservation {
   margin-top: 25px; /* Adjust this value according to your needs */
   left: 20px;
@@ -106,14 +91,6 @@ session_start();
 
 .small-logo {
   margin-top: -14px;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: lavenderblush;
-  background-image: url("loginPageBackground2.jpg");
-  margin: 10px;
-  padding: 0;
 }
 </style>
 
