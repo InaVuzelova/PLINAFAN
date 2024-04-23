@@ -9,15 +9,10 @@
 <body>
 <<<<<<< HEAD
 <?php include 'create.php'; 
+include 'menu.php';
 
 $sqlSelectRoomTypes = "SELECT roomType FROM roomtypes";
 $resultRoomTypes = mysqli_query($dbConn, $sqlSelectRoomTypes);
-
-=======
-<?php 
-include 'create.php';
-include 'menu.php';
->>>>>>> f37ea544fc8b63133ef1ec993f77b336f4edce37
 ?>
 
 <h2>MAKE A RESERVATION: </h2>
