@@ -97,6 +97,7 @@ session_start();
 
 .make-reservation {
   margin-top: 25px; /* Adjust this value according to your needs */
+  left: 20px;
 }
 
 body {
@@ -118,7 +119,7 @@ if(isset($_SESSION['role'])) {
 </head>
 <body>
 <div class="menu">
-  <!--<div class="dropdown-container">-->
+  <div class="dropdown-container">
     <div class="dropdown">
       <?php if($role=="Administrator" || $role=="Client") { ?>
       <img src="menu.png" alt="Menu" width="30" height="30"/>
@@ -130,7 +131,7 @@ if(isset($_SESSION['role'])) {
       </div>
       <?php } ?>
     </div>
-
+  </div>
     <div class="dropdown make-reservation">
       <?php if($role=="Administrator" || $role=="Client") { ?>
       <a href='makeReservation.php'> Make Reservation </a><br>
