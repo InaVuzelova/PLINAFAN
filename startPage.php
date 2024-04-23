@@ -79,10 +79,10 @@ session_start();
 
     .logo {
       position:relative;
-      top: 50px;
+      top: 10px;
       right: 20px;
-      width: 350px;
-      height: 250px;
+      width: 400px;
+      height: 300px;
     }
 
     .image {
