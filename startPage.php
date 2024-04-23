@@ -102,7 +102,7 @@ session_start();
 body {
   font-family: Arial, sans-serif;
   background-color: lavenderblush;
-  background-image: url("library.png");
+  background-image: url("startPageBackground.png");
   margin: 10px;
   padding: 0;
 }
