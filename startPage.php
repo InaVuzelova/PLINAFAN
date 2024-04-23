@@ -100,6 +100,10 @@ session_start();
   left: 20px;
 }
 
+.make-reservation:hover a {
+  color: #f2dbaa;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: lavenderblush;
