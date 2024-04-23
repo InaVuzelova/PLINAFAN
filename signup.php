@@ -14,8 +14,8 @@
 		Password: <input type="password" name="password" required><br>
 		You are: <select name="role">
    		      <option value="Client">Client</option>
-   	     	  <!--<option value="Administrator">Administrator</option>
-   	     	  -->  
+   	     	  <!--<option value="Administrator">Administrator</option> -->
+   	     	   
 			  </select><br><br>
 		<input type="submit" name='submit' value="Sign Up">
 	</form>
