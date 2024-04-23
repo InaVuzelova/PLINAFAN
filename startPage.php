@@ -123,15 +123,22 @@ if(isset($_SESSION['role'])) {
 </head>
 <body>
 <div class="menu">
+  <div class="dropdown">
+    <?php if($role=="Administrator" || $role=="Client") { ?>
+      <a href="startPage.php">
+        <img src="logo.png" width="65" height="70">
+      </a>
+    <?php } ?>
+  </div>
   <div class="dropdown-container">
     <div class="dropdown">
       <?php if($role=="Administrator" || $role=="Client") { ?>
       <img src="menu.png" alt="Menu" width="30" height="30"/>
       <div class="dropdown-content">
-        <a href='input_book.php'>Information</a><br>
-        <a href='input_reader.php'>Services</a><br>
-        <a href='input_publisher.php'>Entertainments</a><br>
-        <a href='input_author.php'>Offers</a><br>
+        <a href='information.php'>Information</a><br>
+        <a href='services.php'>Services</a><br>
+        <a href='entertainment.php'>Entertainments</a><br>
+        <a href='offers.php'>Offers</a><br>
       </div>
       <?php } ?>
     </div>
