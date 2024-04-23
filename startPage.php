@@ -104,6 +104,10 @@ session_start();
   color: #f2dbaa;
 }
 
+.small-logo {
+  margin-top: -14px;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: lavenderblush;
@@ -123,10 +127,10 @@ if(isset($_SESSION['role'])) {
 </head>
 <body>
 <div class="menu">
-  <div class="dropdown">
+  <div class="dropdown small-logo">
     <?php if($role=="Administrator" || $role=="Client") { ?>
       <a href="startPage.php">
-        <img src="logo.png" width="65" height="70">
+        <img src="CutLogo.png" width="60" height="60">
       </a>
     <?php } ?>
   </div>

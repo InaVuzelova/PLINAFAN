@@ -7,7 +7,10 @@
 	<title>Information</title>
 </head>
 <body>
-<?php include 'create.php'; ?>
+<?php 
+include 'create.php';
+include 'menu.php';
+?>
 
 
 <br><a href="startPage.php">

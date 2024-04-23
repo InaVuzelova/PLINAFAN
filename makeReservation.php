@@ -7,7 +7,10 @@
 	<title></title>
 </head>
 <body>
-<?php include 'create.php'; ?>
+<?php 
+include 'create.php';
+include 'menu.php';
+?>
 
 <h2>MAKE A RESERVATION: </h2>
     <form method="post" action="makeReservation.php" class="custom">
