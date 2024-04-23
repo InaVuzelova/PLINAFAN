@@ -9,5 +9,8 @@
 <body>
 <?php include 'create.php'; ?>
 
+
+<br><a href="startPage.php">
+        <img src="arrow.png" width="50" height="35" align="left">
 </body>
 </html>

@@ -119,6 +119,13 @@ if(isset($_SESSION['role'])) {
 </head>
 <body>
 <div class="menu">
+  <div class="dropdown">
+    <?php if($role=="Administrator" || $role=="Client") { ?>
+      <a href="startPage.php">
+        <img src="logo.png" width="65" height="70">
+      </a>
+    <?php } ?>
+  </div>
   <div class="dropdown-container">
     <div class="dropdown">
       <?php if($role=="Administrator" || $role=="Client") { ?>
