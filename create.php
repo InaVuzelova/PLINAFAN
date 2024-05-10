@@ -13,7 +13,8 @@ include 'config.php';
     $sqlCreateTableRoomTypes = "CREATE TABLE IF NOT EXISTS roomTypes(
         roomTypeId INT(6) UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
         roomType    VARCHAR(255),
-        price        DECIMAL(10,2) 
+        price       DECIMAL(10,2),
+        maxPeople   INT(6)
     ) ENGINE=INNODB DEFAULT CHARSET=utf8";
 
     $result2 = mysqli_query($dbConn, $sqlCreateTableRoomTypes);
@@ -27,6 +28,7 @@ include 'config.php';
         roomId                 INT(6) UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
         roomNumber             INT(6),
         roomTypeId             INT(6) UNSIGNED,
+        isFree                 BOOLEAN,
         FOREIGN KEY (roomTypeId) REFERENCES roomTypes(roomTypeId)
     ) ENGINE=INNODB DEFAULT CHARSET=utf8";
 
