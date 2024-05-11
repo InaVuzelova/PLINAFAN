@@ -11,7 +11,8 @@
 include 'create.php';
 include 'menu.php';
 ?>
-
+<a href="startPage.php">
+        <img src="arrow.png" width="50" height="35" align="left">
 <section class="carousel" aria-label="Gallery">
   <ol class="carousel__viewport">
 	<li id="carousel__slide1" tabindex="0" class="carousel__slide">
@@ -68,7 +69,6 @@ include 'menu.php';
   </aside>
 </section>
 
-<br><a href="startPage.php">
-        <img src="arrow.png" width="50" height="35" align="left">
+<br>
 </body>
 </html>

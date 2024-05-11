@@ -96,15 +96,11 @@ session_start();
 }
 
 
-
-
-
-
 /* Adjust the positioning for the contacts dropdown */
 .contacts {
   position: relative; /* Change position to relative */
   display: inline-block; /* Add display inline-block */
-  right: -1150px;
+  right: -1100px;
 }
 
 /* Dropdown styles */
@@ -121,7 +117,7 @@ session_start();
   transition: color 0.3s ease-in-out;
   /* Adjust positioning to align with the contacts icon */
   top: 50px; /* Adjust this value according to your design */
-  right: 0; /* Align with the right side of the contacts icon */
+  right: 0px; /* Align with the right side of the contacts icon */
 }
 
 /* Show the dropdown when hovering over the contacts icon */

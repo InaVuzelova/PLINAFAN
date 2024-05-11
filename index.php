@@ -8,7 +8,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="styles.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Log In</title>
 </head>
 <body class="custom-body">
 <?php include 'create.php'; ?>
