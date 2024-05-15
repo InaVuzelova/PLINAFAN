@@ -13,6 +13,23 @@
 p {
   text-shadow: 5px 5px 15px #050300;
 }
+
+.image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px; /* Space between text and images */
+            gap: 20px; /* Space between images */
+        }
+
+        .image-container img {
+            width: 450px;
+            height: 300px;
+            transition: transform 0.3s ease; /* Smooth zoom transition */
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1); /* Zoom in on hover */
+        }
 </style>
 <body>
 <?php 
@@ -38,6 +55,12 @@ include 'menu.php';
 
 
 </b></p>
+
+<div class="image-container">
+<img src="aquapark1.jpg" alt="Aquapark1" class="left-image">
+<img src="aquapark2.jpg" alt="Aquapark2" class="centered-image">
+<img src="aquapark3.jpg" alt="Aquapark3" class="right-image">
+</div>
 
 </body>
 </html>

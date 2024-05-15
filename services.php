@@ -13,6 +13,25 @@
 p {
   text-shadow: 5px 5px 15px #050300;
 }
+
+.image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px; /* Space between text and images */
+            gap: 20px; /* Space between images */
+        }
+
+        .image-container img {
+            width: 450px;
+            height: 300px;
+            transition: transform 0.3s ease; /* Smooth zoom transition */
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1); /* Zoom in on hover */
+        }
+
+
 </style>
 <body>
 <?php 
@@ -39,6 +58,18 @@ include 'menu.php';
 🔸Също така всеки ден предлагаме аква гимнастика или аква забавление в басейните на много хотели.<br>
 
 За програмата просто попитайте някой от нашите спортни аниматори.</b></p>
+</div>
+<div class="image-container">
+<img src="horseriding.jpg" alt="Horseriding" class="left-image">
+<img src="aquasplash.jpg" alt="Aquasplash" class="centered-image">
+<img src="aerobics.jpg" alt="Aerobics" class="right-image">
+</div>
+<br>
+
+
+
+
+<!-- <img class="horseriding" src="horseriding.jpg"> -->
 
 </body>
 </html>
