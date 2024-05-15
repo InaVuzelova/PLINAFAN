@@ -115,6 +115,6 @@ $resultRoomTypes = mysqli_query($dbConn, $sqlSelectRoomTypes);
 
     ?>
 <br><a href="startPage.php">
-        <img src="arrow.png" width="50" height="35" align="left">
+        <img src="arrow2.png" width="50" height="35" align="left"></a>
 </body>
 </html>
