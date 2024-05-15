@@ -95,13 +95,19 @@ session_start();
   margin-top: -14px;
 }
 
-
-/* Adjust the positioning for the contacts dropdown */
-.contacts {
-  position: relative; /* Change position to relative */
-  display: inline-block; /* Add display inline-block */
-  right: -1100px;
+.all-reservations {
+  margin-top: 24px;
+  left: 600px;
 }
+
+.contacts {
+  position: fixed;
+  display: inline-block;
+  right: 20px;
+  bottom: 40px; /* Adjust this value to move the icon slightly lower */
+  top: -1px;
+}
+
 
 /* Dropdown styles */
 .contacts-dropdown {
@@ -117,7 +123,7 @@ session_start();
   transition: color 0.3s ease-in-out;
   /* Adjust positioning to align with the contacts icon */
   top: 50px; /* Adjust this value according to your design */
-  right: 0px; /* Align with the right side of the contacts icon */
+  right: 0; /* Align with the right side of the contacts icon */
 }
 
 /* Show the dropdown when hovering over the contacts icon */
@@ -202,6 +208,14 @@ if(isset($_SESSION['role'])) {
 </button>
       <?php } ?>
     </div> 
+
+
+    <div class="dropdown all-reservations">
+      <?php if($role=="Administrator") { ?>
+      <a href='allReservations.php'> All Reservations </a><br>
+      <?php } ?>
+    </div>
+
 
     <div class="dropdown contacts">
   <?php if($role=="Administrator" || $role=="Client") { ?>
