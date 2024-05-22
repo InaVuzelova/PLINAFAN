@@ -64,11 +64,13 @@ $resultRoomTypes = mysqli_query($dbConn, $sqlSelectRoomTypes);
       }
 
       if($counter<1){
-        echo "The selected room is too small for the chosen number of people.";
-        echo "The only possible rooms are ";
+        echo "<h2>The selected room is too small for the chosen number of people.</h2>";
+        echo "<h3>The only possible rooms are: </h3>";
+        $sqlCheckPeopleForRoom = "SELECT roomType FROM roomtypes where '$people' <= maxPeople";
+        $resultCheckPeopleForRoom = mysqli_query($dbConn, $sqlCheckPeopleForRoom);
         while($row = mysqli_fetch_assoc($resultCheckPeopleForRoom)) {
           $possibleRoom = $row['roomType'];
-          echo $possibleRoom;
+          echo $possibleRoom . ", ";
         }
 
       } else {
@@ -87,22 +89,24 @@ $resultRoomTypes = mysqli_query($dbConn, $sqlSelectRoomTypes);
           $row = mysqli_fetch_array($resultChosenRoomId);
           $roomId = $row['roomId'];
         } else {
-          echo "Sorry, no rooms are available for the selected room type.";
+          echo "<h2>Sorry, no rooms are available for the selected room type.</h2>";
           exit();
         }
 
-        $sqlUpdateRoomAvailability = "UPDATE rooms SET isFree='0' where roomId = '$roomId'";
-        $resultsqlUpdateRoomAvailability = mysqli_query($dbConn, $sqlUpdateRoomAvailability);
+        //if(CURDATE() >= $startDate AND CURDATE() <= DATE_ADD($startDate, INTERVAL $duration DAY)){
+          $sqlUpdateRoomAvailability = "UPDATE rooms SET isFree='0' where roomId = '$roomId'";
+          $resultsqlUpdateRoomAvailability = mysqli_query($dbConn, $sqlUpdateRoomAvailability);
+        //}
 
         try {
           $stmt = mysqli_prepare($dbConn, "INSERT INTO reservations (startDate, duration, people, roomId, clientName, clientPhone) VALUES (?, ?, ?, ?, ?, ?)");
           mysqli_stmt_bind_param($stmt, 'sisiss', $startDate, $duration, $people, $roomId, $clientName, $clientPhone);  
     
           if (mysqli_stmt_execute($stmt)) {
-              echo "<br><br>Резервацията е направена успешно!";
+              echo "<br><br><h2>Резервацията е направена успешно!</h2>";
               $dbConn->commit();
           } else {
-          echo "<br><br>Грешка при правенето на резервацията!" . mysqli_error($dbConn);
+          echo "<br><br><h2>Грешка при правенето на резервацията!</h2>" . mysqli_error($dbConn);
           }
         } catch (Exception $e) {
           $dbConn->rollback();

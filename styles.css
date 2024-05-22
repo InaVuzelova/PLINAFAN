@@ -29,6 +29,13 @@ form.custom {
   border-radius: 5px;
 }
 
+form.reservationsByMonth {
+  width: 30%;
+  background-color: transparent;   
+  padding: 20px;
+  border-radius: 5px;
+}
+
 form {
   width: 30%;
   background-color: #ffb3b0;
@@ -200,3 +207,8 @@ legend {
       content: "\2190"; /* Unicode for left arrow */
       margin-left: 10px;
     }
+
+
+.buttonCheckReservationsByMonth{
+  background-color: #0a0a23;
+}

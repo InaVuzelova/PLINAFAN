@@ -97,7 +97,20 @@ session_start();
 
 .all-reservations {
   margin-top: 24px;
-  left: 600px;
+  left: 500px;
+}
+
+.reservations-by-month {
+  margin-top: 24px;
+  left: 550px;
+}
+
+.all-reservations-dropdown a:hover {
+  color: #f2dbaa;
+}
+
+.reservations-by-month-dropdown a:hover {
+  color: #f2dbaa;
 }
 
 .contacts {
@@ -210,9 +223,15 @@ if(isset($_SESSION['role'])) {
     </div> 
 
 
-    <div class="dropdown all-reservations">
+    <div class="dropdown all-reservations all-reservations-dropdown">
       <?php if($role=="Administrator") { ?>
       <a href='allReservations.php'> All Reservations </a><br>
+      <?php } ?>
+    </div>
+
+    <div class="dropdown reservations-by-month reservations-by-month-dropdown">
+      <?php if($role=="Administrator") { ?>
+      <a href='reservationsByMonth.php'> Reservations by month</a><br>
       <?php } ?>
     </div>
 
